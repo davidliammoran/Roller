@@ -17,4 +17,13 @@ var complexRoll = function(numDice,d,mod) {
 	return total+mod;
 }
 
-alert(complexRoll(3,6,2));
+//figure out an average roll given x rolls
+var avgRoll = function(rolls,numDice,d,mod) {
+	var total = 0;
+	for (var i = rolls; i > 0; i--) {
+		total += complexRoll(numDice,d,mod);
+	}
+	return total / rolls;
+}
+
+alert(avgRoll(100000,3,6,0));
