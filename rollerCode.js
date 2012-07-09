@@ -10,7 +10,7 @@ var complexRoll = function(numDice,d,mod) {
 	for (var i = numDice; i > 0; i--) {
 		var roll = rollDie(d);
 		if (roll === d) {
-			numDice++;
+			i++;
 		}
 		total += roll;
 	}
